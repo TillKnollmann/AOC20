@@ -22,7 +22,7 @@ public class Reader {
      * @return - the example Input
      */
     public Input getExample(int day, int part) {
-        String fileContent = getFileContent(getPath() + "examples/day" + String.format("%02d", day) + "-part" + String.format("%02d", day) + ".txt");
+        String fileContent = getFileContent(getPath() + "examples/day" + String.format("%02d", day) + "-part" + String.format("%02d", part) + ".txt");
 
         String[] lines = fileContent.split("\n");
         return new Input(String.join("\n", ArrayUtils.subarray(lines, 0, lines.length - 2)), lines[lines.length - 1]);
@@ -37,7 +37,7 @@ public class Reader {
      * @return - the input for the day
      */
     public Input getInput(int day, int part) {
-        return new Input(getFileContent(getPath() + "inputs/day" + String.format("%02d", day) + "-part" + String.format("%02d", day) + ".txt"));
+        return new Input(getFileContent(getPath() + "inputs/day" + String.format("%02d", day) + "-part" + String.format("%02d", part) + ".txt"));
     }
 
     /**

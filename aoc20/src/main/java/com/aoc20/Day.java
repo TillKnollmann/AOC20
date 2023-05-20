@@ -1,6 +1,7 @@
 package com.aoc20;
 
 import com.aoc20.utils.Input;
+import com.aoc20.utils.Reader;
 
 /**
  * Represents a day of the advent
@@ -23,6 +24,12 @@ public abstract class Day {
      */
     public int getNumber() {
         return number;
+    }
+
+    protected void solve() {
+        System.out.println("\n" + "-----------------" + " Day " + this.number + "-----------------");
+        System.out.println("Part 1: " + this.solvePartOne(new Reader().getInput(this.number, 1).getContent()));
+        System.out.println("Part 2: " + this.solvePartTwo(new Reader().getInput(this.number, 2).getContent()));
     }
 
     /**
