@@ -26,4 +26,8 @@ public abstract class DayTest {
         Input testInput = new Reader().getExample(day.getNumber(), 2);
         assertEquals(testInput.getResult(), day.solvePartTwo(testInput.getContent()));
     }
+
+    public abstract void testSolvePartOne();
+
+    public abstract void testSolvePartTwo();
 }
