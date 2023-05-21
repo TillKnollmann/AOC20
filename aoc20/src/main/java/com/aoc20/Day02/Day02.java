@@ -14,6 +14,7 @@ public class Day02 extends Day {
 
     @Override
     public String solvePartOne(String input) {
+        // check each line and check if the password is legit
         String[] lines = input.split("\n");
         int count = 0;
         for (String line: lines) {
@@ -24,6 +25,13 @@ public class Day02 extends Day {
         return "" + count;
     }
 
+    /**
+     * Returns true if the line contains a legit password
+     * subject to part one.
+     *
+     * @param line - the line of the input
+     * @return - true if the password is legit
+     */
     private boolean isPasswordLegitOne(String line) {
         String[] parts = line.split(" ");
         String[] range = parts[0].split("-");
@@ -61,6 +69,13 @@ public class Day02 extends Day {
         return "" + count;
     }
 
+    /**
+     * Returns true if the line contains a legit password with
+     * respect to part two.
+     *
+     * @param line - the line of the input
+     * @return - true if the password is legit
+     */
     private boolean isPasswordLegitTwo(String line) {
         String[] parts = line.split(" ");
         String[] range = parts[0].split("-");

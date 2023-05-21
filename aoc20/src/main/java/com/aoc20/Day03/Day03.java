@@ -22,6 +22,17 @@ public class Day03 extends Day {
         return "" + getTreesOnPath(input, 1, 3);
     }
 
+    /**
+     * Evaluates the input as a map and
+     * returns the number of trees encountered
+     * when moving accoring to the given x and y
+     * step sizes.
+     *
+     * @param input - the map input string
+     * @param slope_y - the step size in y direction
+     * @param slope_x - the step size in x direction
+     * @return - the number of encountered trees
+     */
     private int getTreesOnPath(String input, int slope_y, int slope_x) {
         // get map
         Map map = new Map(input);

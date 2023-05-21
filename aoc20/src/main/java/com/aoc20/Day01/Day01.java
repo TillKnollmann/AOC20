@@ -16,7 +16,10 @@ public class Day01 extends Day {
 
     @Override
     public String solvePartOne(String input) {
+        // interpret each line as an integer
         int[] numbers = Arrays.stream(input.split("\n")).mapToInt(Integer::parseInt).toArray();
+
+        // find first combination of numbers that sum up to 2020 and return their product
         for (int i = 0; i < numbers.length; i++) {
             for (int j = i + 1; j < numbers.length; j++) {
                 if (numbers[i] + numbers[j] == 2020) {
@@ -29,7 +32,10 @@ public class Day01 extends Day {
 
     @Override
     public String solvePartTwo(String input) {
+        // interpret each line as an integer
         int[] numbers = Arrays.stream(input.split("\n")).mapToInt(Integer::parseInt).toArray();
+
+        // find first combination of three number that sum up to 2020 and return their product
         for (int i = 0; i < numbers.length; i++) {
             for (int j = i + 1; j < numbers.length; j++) {
                 for (int k = j + 1; k < numbers.length; k++) {
