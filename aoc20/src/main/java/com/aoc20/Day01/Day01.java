@@ -1,6 +1,8 @@
-package com.aoc20;
+package com.aoc20.Day01;
 
 import java.util.Arrays;
+
+import com.aoc20.Day;
 
 public class Day01 extends Day {
 

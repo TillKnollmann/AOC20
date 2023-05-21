@@ -1,4 +1,6 @@
-package com.aoc20;
+package com.aoc20.Day02;
+
+import com.aoc20.Day;
 
 public class Day02 extends Day {
 
