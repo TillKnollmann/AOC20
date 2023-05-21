@@ -25,6 +25,14 @@ public class Day04 extends Day {
         return "" + Arrays.asList(input.split("\n\n")).stream().map(passport -> isPassportValidOne(passport.replace('\n', ' '), new String[]{"cid"}) ? 1 : 0).mapToInt(Integer::intValue).sum();
     }
 
+    /**
+     * Checks if the given passport is valid according to
+     * part one ignoring the given fields
+     *
+     * @param passport - the passport string
+     * @param ignore - an array of fields to ignore
+     * @return - if the passport is valid according to part one
+     */
     private boolean isPassportValidOne(String passport, String[] ignore) {
         String[] keys = Arrays.asList(passport.split(" ")).stream().map(elem -> elem.split(":")[0]).toArray(String[]::new);
         for (String field: fields) {
@@ -42,6 +50,14 @@ public class Day04 extends Day {
         return "" + Arrays.asList(input.split("\n\n")).stream().map(passport -> isPassportValidTwo(passport.replace('\n', ' '), new String[]{"cid"}) ? 1 : 0).mapToInt(Integer::intValue).sum();
     }
 
+    /**
+     * Checks if the given passport is valid according to
+     * part two ignoring the given fields
+     *
+     * @param passport - the passport string
+     * @param ignore - an array of fields to ignore
+     * @return - if the passport is valid according to part two
+     */
     private boolean isPassportValidTwo(String passport, String[] ignore) {
         String[] pairs = passport.split(" ");
         for (String field: fields) {
